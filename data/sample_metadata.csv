@@ -1,0 +1,7 @@
+"sample_id","condition","batch","replicate","sequencing_depth_millions"
+"Control_1","Control","Batch_1",1,28.4
+"Control_2","Control","Batch_2",2,31.2
+"Control_3","Control","Batch_1",3,29.8
+"Treated_1","Treated","Batch_2",1,30.5
+"Treated_2","Treated","Batch_1",2,27.9
+"Treated_3","Treated","Batch_2",3,32.1

@@ -31,15 +31,29 @@ If you prefer to run the tutorials locally in your own R / RStudio environment:
 
 ---
 
+## 📂 Datasets in `data/`
+
+The `data/` directory provides realistic bioinformatics and clinical datasets designed for the tutorials and exercises:
+
+| File | Description | Samples / Rows | Typical Visualisation |
+|---|---|---|---|
+| `sample_metadata.csv` | Experimental design metadata (`sample_id`, `condition`, `batch`, `sequencing_depth_millions`) | 6 samples | Annotations for PCA & Heatmaps |
+| `rnaseq_raw_counts.csv` | RNA-seq raw count matrix across 500 genes (including classic biomarkers and housekeepers) | 500 genes × 6 samples | Library size bar plots, filtering |
+| `rnaseq_normalized_counts.csv` | Log2 normalized expression values ($log_2(\text{CPM} + 1)$) | 500 genes × 6 samples | Expression line plots, PCA, Heatmaps |
+| `differential_expression_results.csv` | DESeq2-style differential expression results (baseMean, log2FoldChange, stat, pvalue, padj, regulation) | 500 genes | Volcano plots, MA plots, gene ranking |
+| `patient_clinical_data.csv` | Clinical patient cohort (age, sex, cancer type, stage, tumor size, biomarker level, survival months, vital status) | 150 patients | Boxplots, violin plots, regression, faceting |
+
+---
+
 ## 📚 Included Tutorials
 
 - `tutorial/01_Introduction.R` – First ggplot example using `mtcars`
-- `tutorial/02_ggplot2.R` – ggplot customisation, regression lines, and groupings
-- `tutorial/03_Gene_Expression.R` – Gene expression data reshaping and line plotting
-- `tutorial/04_PCA.R` – Dimensionality reduction and PCA scatter plotting
-- `tutorial/05_Heatmaps.R` – Expression clustering and heatmaps with `pheatmap`
-- `tutorial/06_Volcano_Plot.R` – Differential expression volcano plots with threshold cutoffs
-- `tutorial/07_Exercises.R` – Practice exercises
+- `tutorial/02_ggplot2.R` – ggplot customisation, regression lines, and patient clinical data boxplots
+- `tutorial/03_Gene_Expression.R` – Reshaping RNA-seq expression data and multi-gene bar/line plotting
+- `tutorial/04_PCA.R` – Dimensionality reduction, PCA scatter plotting with variance explained and metadata aesthetics
+- `tutorial/05_Heatmaps.R` – Clustered heatmaps of top variable genes with sample annotations (`pheatmap`)
+- `tutorial/06_Volcano_Plot.R` – Differential expression volcano plots with threshold cutoffs and `ggrepel` labeling
+- `tutorial/07_Exercises.R` – 5 hands-on practice exercises based on the datasets in `data/`
 
 ---
 
@@ -65,5 +79,3 @@ ggplot(
   ) +
   theme_minimal()
 ```
-
-Place any raw datasets in the `data/` folder before running the later tutorials.
