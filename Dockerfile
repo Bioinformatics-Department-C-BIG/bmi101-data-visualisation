@@ -2,15 +2,19 @@ FROM rocker/binder:latest
 
 USER root
 
+# Ensure required system libraries and package lists are available
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
-    libfontconfig1-dev \
-    && rm -rf /var/lib/apt/lists/*
+    libfontconfig1-dev
 
 USER ${NB_USER}
 
-COPY --chown=${NB_USER}:${NB_USER} install.R /home/${NB_USER}/install.R
+# Copy entire repository to user home directory so tutorials and data are available in RStudio
+COPY --chown=${NB_USER}:${NB_USER} . ${HOME}
 
-RUN Rscript /home/${NB_USER}/install.R
+WORKDIR ${HOME}
+
+# Run R package installer
+RUN if [ -f install.R ]; then R --quiet -f install.R; fi

@@ -1,24 +1,49 @@
 # BMI101 Data Visualisation Tutorial
 
-This repository contains a short R-based data visualisation tutorial for the CING MSc Bioinformatics module.
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Bioinformatics-Department-C-BIG/bmi101-data-visualisation/main?urlpath=rstudio)
 
-## Setup
+This repository contains an R-based data visualisation tutorial for the CING MSc Bioinformatics module.
 
-```bash
-Rscript install.R
-```
+## 🚀 Launch Interactive Cloud RStudio Session
 
-## Included tutorials
+You can launch a full, interactive **RStudio Server** session directly in your web browser with no local setup required:
 
-- `tutorial/01_Introduction.R` - first ggplot example using mtcars
-- `tutorial/02_ggplot2.R` - ggplot customisation and grouping
-- `tutorial/03_Gene_Expression.R` - gene expression plotting ideas
-- `tutorial/04_PCA.R` - dimensionality reduction visualisation
-- `tutorial/05_Heatmaps.R` - clustering heatmaps
-- `tutorial/06_Volcano_Plot.R` - differential expression volcano plots
-- `tutorial/07_Exercises.R` - practice exercises
+👉 [![Launch RStudio on Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Bioinformatics-Department-C-BIG/bmi101-data-visualisation/main?urlpath=rstudio) **[Click here to open RStudio on MyBinder](https://mybinder.org/v2/gh/Bioinformatics-Department-C-BIG/bmi101-data-visualisation/main?urlpath=rstudio)**
 
-## Introduction example
+> **Note:** The `?urlpath=rstudio` parameter routes directly to RStudio Server with all tutorial scripts, datasets, and packages pre-loaded (`tidyverse`, `ggplot2`, `ggrepel`, `patchwork`, `viridis`, `pheatmap`, `RColorBrewer`).
+
+---
+
+## 💻 Local Setup
+
+If you prefer to run the tutorials locally in your own R / RStudio environment:
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Bioinformatics-Department-C-BIG/bmi101-data-visualisation.git
+   cd bmi101-data-visualisation
+   ```
+
+2. Install dependencies:
+   ```bash
+   Rscript install.R
+   ```
+
+---
+
+## 📚 Included Tutorials
+
+- `tutorial/01_Introduction.R` – First ggplot example using `mtcars`
+- `tutorial/02_ggplot2.R` – ggplot customisation, regression lines, and groupings
+- `tutorial/03_Gene_Expression.R` – Gene expression data reshaping and line plotting
+- `tutorial/04_PCA.R` – Dimensionality reduction and PCA scatter plotting
+- `tutorial/05_Heatmaps.R` – Expression clustering and heatmaps with `pheatmap`
+- `tutorial/06_Volcano_Plot.R` – Differential expression volcano plots with threshold cutoffs
+- `tutorial/07_Exercises.R` – Practice exercises
+
+---
+
+## 🧪 Introduction Example
 
 ```R
 library(tidyverse)

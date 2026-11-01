@@ -8,13 +8,11 @@ packages <- c(
   "RColorBrewer"
 )
 
-installed <- rownames(installed.packages())
+missing_pkgs <- packages[!packages %in% rownames(installed.packages())]
 
-for (pkg in packages) {
-  if (!pkg %in% installed) {
-    install.packages(
-      pkg,
-      repos = "https://cloud.r-project.org"
-    )
+if (length(missing_pkgs) > 0) {
+  if (is.null(getOption("repos")) || getOption("repos")["CRAN"] == "@CRAN@") {
+    options(repos = c(CRAN = "https://cloud.r-project.org"))
   }
+  install.packages(missing_pkgs)
 }
