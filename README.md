@@ -1,6 +1,6 @@
 # BMI101 Data Visualisation Tutorial
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Bioinformatics-Department-C-BIG/bmi101-data-visualisation/main?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Bioinformatics-Department-C-BIG/bmi101-data-visualisation/HEAD?urlpath=rstudio)
 
 This repository contains an R-based data visualisation tutorial for the CING MSc Bioinformatics module.
 
@@ -8,7 +8,7 @@ This repository contains an R-based data visualisation tutorial for the CING MSc
 
 You can launch a full, interactive **RStudio Server** session directly in your web browser with no local setup required:
 
-👉 [![Launch RStudio on Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Bioinformatics-Department-C-BIG/bmi101-data-visualisation/main?urlpath=rstudio) **[Click here to open RStudio on MyBinder](https://mybinder.org/v2/gh/Bioinformatics-Department-C-BIG/bmi101-data-visualisation/main?urlpath=rstudio)**
+👉 [![Launch RStudio on Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Bioinformatics-Department-C-BIG/bmi101-data-visualisation/HEAD?urlpath=rstudio) **[Click here to open RStudio on MyBinder](https://mybinder.org/v2/gh/Bioinformatics-Department-C-BIG/bmi101-data-visualisation/HEAD?urlpath=rstudio)**
 
 > **Note:** The `?urlpath=rstudio` parameter routes directly to RStudio Server with all tutorial scripts, datasets, and packages pre-loaded (`tidyverse`, `ggplot2`, `ggrepel`, `patchwork`, `viridis`, `pheatmap`, `RColorBrewer`).
 
